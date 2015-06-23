@@ -19,4 +19,4 @@ Confirm your Ruby environment is correctly using the DevKit by running gem insta
 5. Clone this repo
 6. cd to cucumber-ruby-kickstarter
 7. gem install bundler --no-ri --no-rdoc
-8. bundle install
+8. ```bundle install```
