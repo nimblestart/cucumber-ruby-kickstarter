@@ -17,7 +17,7 @@ Confirm your Ruby environment is correctly using the DevKit by running gem insta
   - extract x64 to path
   - on commnad prompt run ansicon -i
 5. Clone this repo or download and extract the zip
-6. rename cucumber-ruby-kickstarter to <your_project_folder>
+6. rename cucumber-ruby-kickstarter to your_project_folder (whatever name you like)
 7. ```cd your_project_folder```
 8. ```gem install bundler --no-ri --no-rdoc```
 9. ```bundle install```
