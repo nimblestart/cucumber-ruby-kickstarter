@@ -4,7 +4,7 @@ A quick example of how to bring Cucumber and Ruby together to automate a Google 
 ## Getting Started
 1. Install Ruby (use version 1.9.x) - http://rubyinstaller.org/downloads/
   - install in c:\ itself
-  - choose ruby executable to path
+  - add ruby executable to path (environment variable)
 2. Install Devkit - Download from above location (use the version corresponding to above Ruby version)
   - Create directory ```md c:/programs/devkit```
   - run it to extract it to above dir (_*permanent*_). 
