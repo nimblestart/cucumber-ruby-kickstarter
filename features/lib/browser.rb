@@ -13,7 +13,7 @@ class Browser
   # Deletes all cookies from the browser
   def delete_cookies
     @driver.cookies.clear
-    log "Deleted all the cookies"
+    CommonLogger.log.info "Deleted all the cookies"
   end
 
   # Sets the timeout to find elements
@@ -21,7 +21,7 @@ class Browser
   # @param [String] timeout value for timeout
   def set_timeout(timeout)
     @driver.driver.manage.timeouts.implicit_wait = timeout
-    log "Browser timeout set to: " + timeout.to_s
+    CommonLogger.log.info "Browser timeout set to: " + timeout.to_s
   end
 
   # Starts the browser
@@ -63,7 +63,7 @@ class Browser
     end
 
     # Return driver
-    log "Driver initialized for browser: #{@browser_name}"
+    CommonLogger.log.info "Driver initialized for browser: #{@browser_name}"
     return driver
   end
 

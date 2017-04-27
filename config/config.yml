@@ -1,8 +1,11 @@
 dev:
-    :url: https://www.google.com
+    :google_base_url: https://www.google.com
+    :amtrak_base_url: https://www.amtrak.com
 
 qa:
-    :url: https://www.google.com
+    :google_base_url: https://www.google.com
+    :amtrak_base_url: https://www.amtrak.com
 
 prod:
-    :url: https://www.google.com
+    :google_base_url: https://www.google.com
+    :amtrak_base_url: https://www.amtrak.com

@@ -1,4 +1,3 @@
-#require 'selenium-webdriver'
 require 'watir'
 require 'cucumber'
 require 'page-object'
@@ -6,8 +5,8 @@ require 'page-object/page_factory'
 require 'rspec/expectations'
 
 require_relative '../support/hooks'
-require_relative '../lib/helper'
-require_relative '../lib/browser'
+Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each {|file| require file }
+Dir[File.dirname(__FILE__) + '/../lib/helpers/*.rb'].each {|file| require file }
 
 World(PageObject::PageFactory)
 
@@ -17,8 +16,7 @@ browser.delete_cookies
 browser.set_timeout(10)
 
 # Load the config items
-project_root = File.expand_path('../..', __FILE__)
-$BASE_URL = YAML.load_file(project_root + "/config/config.yml")[ENV['TEST_ENV']][:url]
+load_config_file()
 
 # Actions performed before each scenario
 Before do
