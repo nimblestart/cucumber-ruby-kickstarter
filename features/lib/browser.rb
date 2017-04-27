@@ -12,7 +12,7 @@ class Browser
 
   # Deletes all cookies from the browser
   def delete_cookies
-    @driver.manage.delete_all_cookies
+    @driver.cookies.clear
     log "Deleted all the cookies"
   end
 
@@ -20,7 +20,7 @@ class Browser
   #
   # @param [String] timeout value for timeout
   def set_timeout(timeout)
-    @driver.manage.timeouts.implicit_wait = timeout
+    @driver.driver.manage.timeouts.implicit_wait = timeout
     log "Browser timeout set to: " + timeout.to_s
   end
 
@@ -31,21 +31,35 @@ class Browser
     # Define browser to use from config
     case browser
       when 'firefox'
-        driver = Selenium::WebDriver.for :firefox
         @browser_name = 'Firefox'
+        #To Do -- check how to integrate firebug and then update the code accordingly
+        #profile = Selenium::WebDriver::Firefox::Profile.new
+        #profile.add_extension '../path/to/firebug.xpi'
+        #b = Watir::Browser.new :firefox, profile: profile
+        driver = Watir::Browser.new :firefox, profile: 'default'
+
       when 'chrome'
-        Selenium::WebDriver::Chrome.path = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
-        driver = Selenium::WebDriver.for :chrome
         @browser_name = 'Chrome'
+        # when using Chrome browser ensure the ChromeDriver is present in the PATH
+        # refer https://sites.google.com/a/chromium.org/chromedriver/getting-started
+        prefs = {
+                  download: {
+                              prompt_for_download: false, 
+                              default_directory: "/path/to/dir"
+                            }
+        }
+        #driver = Selenium::WebDriver.for :chrome, prefs: prefs #if using selenium using similar code
+        driver = Watir::Browser.new :chrome, prefs: prefs
       when 'headless'
+        @browser_name = 'PhantomJS (Headless)'
+        # To Do update Headeless for Watir
         # Set the path to phantomjs.exe
         Selenium::WebDriver::PhantomJS.path = 'C:\programs\phantomjs-1.9.8-windows\phantomjs.exe'
         driver = Selenium::WebDriver.for :phantomjs
-        @browser_name = 'PhantomJS (Headless)'
       else
         # Default to using firefox
-        driver = Selenium::WebDriver.for :firefox
         @browser_name = 'Firefox (default)'
+        driver = Watir::Browser.new :firefox, profile: 'default'
     end
 
     # Return driver

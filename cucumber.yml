@@ -4,7 +4,7 @@
 <%
 rerun = File.file?('rerun.txt') ? IO.read('rerun.txt') : ""
 rerun_opts = rerun.to_s.strip.empty? ? "--format progress features" : "--format pretty #{rerun}"
-std_opts = "--format progress --tags ~@wip --strict BROWSER=firefox"
+std_opts = "--format progress --tags ~@wip --strict BROWSER=chrome"
 dev_opts = "--format progress --tags @dev --strict BROWSER=firefox"
 headless_opts = "--format progress --tags ~@wip --strict BROWSER=headless"
 wip_opts = "--color --tags @wip"

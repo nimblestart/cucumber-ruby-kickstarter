@@ -1,4 +1,5 @@
-require 'selenium-webdriver'
+#require 'selenium-webdriver'
+require 'watir'
 require 'cucumber'
 require 'page-object'
 require 'page-object/page_factory'
