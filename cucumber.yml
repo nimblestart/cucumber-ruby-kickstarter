@@ -4,17 +4,12 @@
 <%
 rerun = File.file?('rerun.txt') ? IO.read('rerun.txt') : ""
 rerun_opts = rerun.to_s.strip.empty? ? "--format progress features" : "--format pretty #{rerun}"
-std_opts = "--format progress --tags ~@wip --strict BROWSER=chrome"
-dev_opts = "--format progress --tags @dev --strict BROWSER=firefox"
-headless_opts = "--format progress --tags ~@wip --strict BROWSER=headless"
-wip_opts = "--color --tags @wip"
+std_opts = "--format progress --tags ~@wip --strict BROWSER=chrome ENV=qa"
+wip_opts = "--format progress --tags @wip"
 %>
 
 default:     <%= std_opts %>
-headless:    <%= headless_opts %>
-wip:         --wip <%= wip_opts %>
-dev:         <%= dev_opts %> --format html --out=report/test_report.html --format json --out=report/cucumber.json
-none:        --format pretty
+wip:         <%= wip_opts %>
 rerun:       <%= rerun_opts %> --format rerun --out rerun.txt --strict --tags ~@wip
 html_report: <%= std_opts %> --format html --out=report/test_report.html
 json_report: <%= std_opts %> --format json --out=report/cucumber.json

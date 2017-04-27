@@ -1,0 +1,36 @@
+# My Trip Details
+search_criteria:
+  email_address: JHETT.BROOKS@AMTRAK.COM
+# View Reservation Details  
+# Cancel Reservation Summary
+cancel_reservation_summary_ui_component:
+  back_to_reservation_page_button_element: UI_COMPONENT
+  cancel_reservaion_button_element: UI_COMPONENT
+cancel_reservation_summary_info:
+  details_reservation_num: "CANCEL RESERVATION: 0EAB6F"
+cancel_reservation_summary_refund_summary_info:
+  journey_data_1: "Thursday, November 27, 2014\n510 Amtrak Cascades  ( SEA  -  VAC )\n  Depart:\n7:45 am, Thu, Nov 27, 2014\n\nArrive:\n11:45 am, Thu, Nov 27, 2014\n\nDuration:\n4 hr, 0 min\n\n1 Adult\nID Type: Passport required\n\n1 Business Class Seat"
+  purchase_total: "$84.00"
+review_cancel_info:
+  original_purchase_amount: "$84.00"
+  cancel_subtotal_amount: "$84.00"
+refund_options_info:
+  refund_fee_amount_cc: "-$0.00"
+  refund_total_amount_cc: "$84.00"
+  refund_fee_amount_evoucher: "-$0.00"
+  refund_total_amount_evoucher: "$84.00"
+
+# Cancel Reservation Confrimation
+cancel_resrevation_confirmation_info:
+  details_reservation_num: "CANCEL RESERVATION: 0EAB6F"
+  cancellation_reference_num: "Cancellation Reference Number: 7988"
+cancel_resrevation_confirmation_refund_summary_info:
+  journey_data_1: "Thursday, November 27, 2014\n510 Amtrak Cascades  ( SEA  -  VAC )\n  Depart:\n7:45 am, Thu, Nov 27, 2014\n\nArrive:\n11:45 am, Thu, Nov 27, 2014\n\nDuration:\n4 hr, 0 min\n\n1 Adult\nID Type: Passport required\n\n1 Business Class Seat"
+  purchase_total: "$84.00"
+review_refund_info:
+  original_purchase_amount: "$84.00"
+  cancel_subtotal_amount: "$84.00"
+  refund_fee: "-$0.00"
+review_refund_eVoucher_info:
+  refund_fee_amount_evoucher: "Total Amount Applied to eVoucher\n$84.00"
+  refund_blurb: "Applied to: eVoucher V736235287 (Expires 11/20/2015)"

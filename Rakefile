@@ -15,9 +15,3 @@ Cucumber::Rake::Task.new do |t|
 end
 
 task :acceptanceTest => :cucumber
-
-task :version do
-  Dir.chdir(File.dirname(__FILE__)) do
-    puts '1.0.0-' + `git rev-list --all #{pwd} | wc -l`.strip
-  end
-end

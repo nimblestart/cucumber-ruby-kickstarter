@@ -1,9 +1,3 @@
-# Puts the passsed on String parameter to the console
-def log(message)
-  message_with_nl = message.gsub("\n", "\\n")
-  puts message_with_nl
-end
-
 # Captures Browser screenshot as .png, takes scenario object as the parameter
 def capture_screenshot(scenario)
   date_time = Time.now.strftime('%Y%m%d_%H.%M.%S_')

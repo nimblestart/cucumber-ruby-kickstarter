@@ -1,0 +1,8 @@
+dev:
+    :url: https://www.google.com
+
+qa:
+    :url: https://www.google.com
+
+prod:
+    :url: https://www.google.com
