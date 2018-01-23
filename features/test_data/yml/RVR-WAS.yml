@@ -1,6 +1,6 @@
 # My Trip Details
 search_criteria:
-  email_address: JHETT.BROOKS@AMTRAK.COM
+  email_address: test@gmail.COM
 # View Reservation Details  
 # Cancel Reservation Summary
 cancel_reservation_summary_ui_component:
